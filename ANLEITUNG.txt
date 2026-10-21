@@ -1,0 +1,22 @@
+EW-DX Monitor: Windows EXE kostenlos mit GitHub Actions bauen
+
+1. Auf github.com ein NEUES PRIVATE Repository erstellen, z.B. ewdx-monitor.
+   README, .gitignore und Lizenz bei der Erstellung NICHT automatisch anlegen.
+2. Dieses ZIP auf dem Mac entpacken.
+3. Im neuen Repository auf "uploading an existing file" (oder Add file > Upload files) klicken.
+4. app.py, den Ordner web und die Dateien .github/workflows/windows.yml und .gitignore hochladen.
+   ACHTUNG: Der Browser-Upload ganzer Ordner kann je nach Browser variieren.
+   Im Finder versteckte Dateien mit Cmd+Shift+. einblenden.
+   Falls der Browser .github nicht als Ordner hochlaedt, die Workflow-Datei auf GitHub
+   ueber Add file > Create new file mit dem Pfad .github/workflows/windows.yml anlegen.
+5. "Commit changes" klicken.
+6. Auf GitHub unter Actions > Windows EXE bauen > Run workflow > Run workflow starten.
+   (Bei erstem Push kann der Build bereits automatisch starten.)
+7. Nach gruenem Haken den Build oeffnen. Unter Artifacts "EWDX-Monitor-Windows" herunterladen.
+8. ZIP entpacken. Die Datei ewdx.db aus deinem bisherigen Projekt IN DIESEN
+   entpackten Programmordner neben EWDX-Monitor.exe kopieren.
+9. Gesamten Ordner auf den vMix-Rechner kopieren und EWDX-Monitor.exe starten.
+   Bei Windows-Firewall fuer den gewaehlten Port (Standard 8080) freigeben.
+
+WICHTIG: ewdx.db NICHT auf GitHub hochladen! Deine Historie bleibt privat.
+Die EXE ist bisher nicht auf einem echten Windows-System getestet.
